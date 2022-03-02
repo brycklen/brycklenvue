@@ -33,32 +33,17 @@ public class StudentController {
 		return "student-roster";
 	}
 	
-	@GetMapping("/roster/new")
-	public String createStudentForm(Model model) {
-		// New student added
-		Student student = new Student();
-		model.addAttribute("student", student);
-		return "student-add";
-	}
-	
-	
-	@GetMapping("/roster/update/{id}")
-	public String editStudentForm(@PathVariable Long id, Model model) {
-		model.addAttribute("student", studentService.getStudentById(id));
-		return "student-update";
-	}
-	
-	// Deletion Confirmation
-	@GetMapping("/roster/confirmdelete/{id}")
-	public String confirmDeleteStudent(@ModelAttribute("student") Student student) {
-		return "student-confirm-delete";
-	}
-	
 	// Delete student from roster
 	@GetMapping("/roster/delete/{id}")
 	public String deleteStudent(@PathVariable Long id) {
 		studentService.deleteStudentById(id);
 		return "redirect:/roster";
+	}
+		
+	// Deletion confirmation
+	@GetMapping("/roster/confirmdelete/{id}")
+	public String confirmDeleteStudent(@ModelAttribute("student") Student student) {
+		return "student-confirm-delete";
 	}
 	
 	@PostMapping("/roster")
@@ -67,16 +52,33 @@ public class StudentController {
 		return "redirect:/roster";
 	}
 	
+	@GetMapping("/roster/new")
+	public String createStudentForm(Model model) {
+		// New student added
+		Student student = new Student();
+		model.addAttribute("student", student);
+		return "student-add";
+	}
+	
+	@GetMapping("/roster/update/{id}")
+	public String editStudentForm(@PathVariable Long id, Model model) {
+		model.addAttribute("student", studentService.getStudentById(id));
+		return "student-update";
+	}
+
 	@PostMapping("/roster/{id}")
-	public String updateStudent(@PathVariable Long id, @ModelAttribute("student") Student student, Model model) {
+	public String updateStudent(@PathVariable Long id,
+			@ModelAttribute("student") Student student,
+			Model model) {
 		
 		// Retrieving the student from the database
 		Student currentStudent = studentService.getStudentById(id);
 		
 		// Set updated characteristics for students to the database
-		currentStudent.setID(id);
+		currentStudent.setId(id);
 		currentStudent.setFirstName(student.getFirstName());
 		currentStudent.setLastName(student.getLastName());
+		currentStudent.setAge(student.getAge());
 		
 		// Student with corresponding ID is saved to the database
 		studentService.updateStudent(currentStudent);
