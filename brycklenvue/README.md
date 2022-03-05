@@ -27,6 +27,7 @@ Files of importance:
 5. CLick "Browse..." and select the **unzipped** folder for the application
 6. Press "Finish"
 
+IMPORTANT: Start at localhost:7890 and go from there (no login info is needed for login page; just click "Sign in"); the navigation bar at the top has both pages (students and courses)
 ---
 
 # Bugs
