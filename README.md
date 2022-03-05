@@ -28,5 +28,5 @@ MVC was used in this project using 5 subdirectories:
 
 # Bugs
 - Courses not appearing on Courses page but inputted courses appear in H2 console.
-- Many-to-Many relationship database is glitching up too much to make it pragmatic to implement
+- Many-to-Many relationship database (COURSE_REGISTRATION) is glitching too much to make it pragmatic to implement
 - No input sanitization, leading to error pages when submitting wrong types into fields (entering String into form field made for int, etc.)
