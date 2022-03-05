@@ -8,6 +8,11 @@ Technologies used:
 - JPA/H2 Database
 - HTML/CSS/Bootstrap
 
+Files of importance:
+pom.xml (Dependencies and metadata)
+Folders/files in src/main/java
+Folders/files in src/main/resources
+
 # Getting Started
 
 1. Download Spring Tool Suite for Eclipse (https://spring.io/tools) and download/unzip the zip file for this project
