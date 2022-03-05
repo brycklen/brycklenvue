@@ -12,10 +12,10 @@ Files of importance:
 - pom.xml (Dependencies and metadata)
 ---
 - Folders/files in src/main/java
-![alt text](https://github.com/brycklen/brycklenvue/blob/main/main-files.JPG?raw=true)
+![](main-files.JPG?)
 ---
 - Folders/files in src/main/resources
-![alt text](https://github.com/brycklen/brycklenvue/blob/main/design-and-configuration-files.JPG?raw=true)
+![](design-and-configuration-files.JPG)
 
 # Getting Started
 
