@@ -9,9 +9,9 @@ Technologies used:
 - HTML/CSS/Bootstrap
 
 Files of importance:
-pom.xml (Dependencies and metadata)
-Folders/files in src/main/java
-Folders/files in src/main/resources
+- pom.xml (Dependencies and metadata)
+- Folders/files in src/main/java
+- Folders/files in src/main/resources
 
 # Getting Started
 
